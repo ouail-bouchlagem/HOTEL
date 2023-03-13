@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #f6f6f6    ;
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #262526;
+    height: 120%;
+}
+
+.above{
+    font-size: 13px;
+    font-weight: 50;
+    margin: 20px;
+    color: rgb(76, 76, 76);
+}
+
+.page{
+    background-color: white;
+    height: 200px;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+@media (max-width:600px) {
+    .page{
+        width: 100%;
+    }
+}
+
+header,footer{
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Odibee Sans';
+}
+
+
+
+header::before,.title::before{
+    content: "HOTEL";
+    font-size: 10px;
+    font-weight: 100;
+}
+header::after,.title::after{
+    content: "TANKA";
+    font-size: 30px;
+    font-weight: 300;
+}
+
+
+.greeting{
+    background-color: #ece7df    ;
+    position: relative;
+    height: 500px;
+}
+
+.greeting img {
+    position: absolute;
+    width: 50%;
+    height: 240px;
+    right: 5%;
+    top: 8%;
+}
+
+.thank{
+    width: fit-content ;
+    padding:  50px   ;
+    border: #262526 1px solid;
+    position: absolute;
+    left: 0;
+    border-radius: 0 100px 100px 0;    
+    top: 50px;
+    z-index: 2;
+    border-left-color: transparent;
+}
+
+.thank::before{
+    display: block;
+    content: "Thank you!";
+    font-family: serif;
+    font-size: 50px;
+    font-weight: 800 !important ;
+}
+
+
+
+.msg{
+    padding: 10px 50px;
+    font-weight: 100;
+    font-size: 15px;
+    position: relative;
+    top: 60%;
+}
+
+.details{
+    padding: 50px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9,auto);
+}
+
+h1{
+    margin: 15px auto;
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+    font-family: serif;
+    grid-column:span 2  ;
+}
+.details .item {
+    width: fit-content;
+    padding: 0 5px;
+    background-image: linear-gradient(to bottom,
+                                        transparent 50%,
+                                        #ece7df 50%,
+                                        #ece7df);
+}
+
+
+
+.value{
+    text-align: right;
+}
+.item:nth-of-type(1),
+.item:nth-of-type(5),
+.item:nth-of-type(11),
+.item:nth-of-type(12),
+.value:nth-of-type(2),
+.value:nth-of-type(6),
+.value:nth-of-type(12),
+.value:nth-of-type(13){
+    margin-bottom: 20px;
+}
+
+.instgram{
+    padding: 50px;
+    background-color: #ece7df;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(4,auto);
+    gap: 10px;
+}
+
+.instgram button{
+    margin: 30px;
+    padding: 20px;
+    border-color: #262526 ;
+    color:  #262526;
+    border-radius: 40px;
+    border-width: 1px;
+    background-color: transparent;
+
+}
+
+
+
+
+.instgram h1 , .instgram button{
+    grid-column: span 3;
+}
+
+.instgram img{
+    width: 150px;
+}
+
+
+footer{
+    background-color: #262526;
+    color: white;
+}
+
+.title{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links img{
+    width: 20px;
+}
+
+footer p{
+    padding: 20px;
+    font-weight: 100;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+@media (max-width:600px) {
+    .details .item , .details .value {
+        font-size: 20px;
+    }
+}
+@media (max-width:510px) {
+    .details .item , .details .value {
+        font-size: 15px;
+    }
+    .instgram img{
+        width: 125px;
+    }
+}
+@media (max-width:410px) {
+    .details .item , .details .value {
+        font-size: 10px;
+    }
+    .instgram img{
+        width: 95px;
+    }
+    .thank{
+        padding:30px   ;
+        font-size: 20px;
+    }
+    .thank::before{
+        font-size: 40px;
+    }
+}
+@media (max-width:310px) {
+    .details .item , .details .value {
+        font-size: 5px;
+    }    
+    .instgram img{
+        width: 50px;
+    }
+}
